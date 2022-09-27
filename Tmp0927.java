@@ -1,52 +1,53 @@
-package practice;
+package java2_0927_pkg;
+
 
 public class Tmp0927 {
 
 	public static void main(String[] args) {
-//		System.out.println("‚±‚ñ‚É‚¿‚Í");
-//		//–â‘è2
+//		System.out.println("ã“ã‚“ã«ã¡ã¯");
+//		//å•é¡Œ2
 //		int[] n= {13,21,15,5,2,8};
 //		for(int i=0;i<n.length;i++) {
 //			if(n[i]>=10) {
-//				System.out.println("10ˆÈã‚Å‚·");
+//				System.out.println("10ä»¥ä¸Šã§ã™");
 //			}else {
-//				System.out.println("10–¢–‚Å‚·B");
+//				System.out.println("10æœªæº€ã§ã™ã€‚");
 //			}
 //		}
-//		//–â‘è3
+//		//å•é¡Œ3
 //		for(int i=0;i<n.length;i++) {
 //			if(n[i]%2==0) {
-//				System.out.println("‹ô”‚Å‚·B");
+//				System.out.println("å¶æ•°ã§ã™ã€‚");
 //			}else {
-//				System.out.println("Šï”‚Å‚·B");
+//				System.out.println("å¥‡æ•°ã§ã™ã€‚");
 //			}
 //		}
-		//–â‘è4
-//		Item item=new Item("ƒŠƒ“ƒS",100);
+		//å•é¡Œ4
+//		Item item=new Item("ãƒªãƒ³ã‚´",100);
 //		item.display();
 		
 		
-		//–â‘è5
-		while(true) {
-			try{
-				int num=new java.util.Scanner(System.in).nextInt();
-				System.out.println("— ‚Ì–Ú‚Í"+(7-num));
-				System.out.println("‘±‚¯‚Ü‚·‚©Hiy/nj");
-				String yn=new java.util.Scanner(System.in).nextLine();
-				if(yn.charAt(0)!='y') {
-					break;
-				}			
-			}catch(Exception e){
-				System.out.println("”’l‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
-			}
-		}
+		//å•é¡Œ5
+//		while(true) {
+//			try{
+//				int num=new java.util.Scanner(System.in).nextInt();
+//				System.out.println("è£ã®ç›®ã¯"+(7-num));
+//				System.out.println("ç¶šã‘ã¾ã™ã‹ï¼Ÿï¼ˆy/nï¼‰");
+//				String yn=new java.util.Scanner(System.in).nextLine();
+//				if(yn.charAt(0)!='y') {
+//					break;
+//				}			
+//			}catch(Exception e){
+//				System.out.println("æ•°å€¤ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„");
+//			}
+//		}
 		
-		//–â‘è6
+		//å•é¡Œ6
 //		int add=500;
 //		while(true) {
 //			try{
 //				int sum=0;
-//				System.out.print("d‚³‚ÍH„„");
+//				System.out.print("é‡ã•ã¯ï¼Ÿï¼ï¼");
 //				int num=new java.util.Scanner(System.in).nextInt();
 //				if(num<6) {
 //					sum+=add;
@@ -54,45 +55,56 @@ public class Tmp0927 {
 //					sum+=add;
 //					sum+=num*100;
 //				}
-//				System.out.println("è”—¿‚Æ‘——¿‚Å"+sum);
-//				System.out.print("‘±‚¯‚Ü‚·‚©Hiy/nj");
+//				System.out.println("æ‰‹æ•°æ–™ã¨é€æ–™ã§"+sum);
+//				System.out.print("ç¶šã‘ã¾ã™ã‹ï¼Ÿï¼ˆy/nï¼‰");
 //				String yn=new java.util.Scanner(System.in).nextLine();
 //				if(yn.charAt(0)!='y') {
 //					break;
 //				}			
 //			}catch(Exception e){
-//				System.out.println("”’l‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+//				System.out.println("æ•°å€¤ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„");
 //			}
 //		}		
 		
-		//–â‘è7
+		//å•é¡Œ7
 //		String[][] array= {{"code","data"},{"apple","orange"},{"peach","grape"}};
 //		for(String[] tmp:array) {
 //			if(tmp[0].length()==tmp[1].length()) {
-//				System.out.println("œ");
+//				System.out.println("â—");
 //			}else {
-//				System.out.println("~");
+//				System.out.println("Ã—");
 //			}
 //		}
 		
-		//–â‘è8
-//		Car car1=new Car(100,"ƒ„ƒŠƒX");
-//		Car car2=new Car("ƒxƒ“ƒc");
-//		System.out.println(car1.getName()+"‚Í"+car1.getSpeed()+"km/h‚Å‘–‚Á‚½");
-//		car1.drive();
+		//å•é¡Œ8
+		Cara car1=new Cara(100,"ãƒ¤ãƒªã‚¹","taro");
+		Cara car2=new Cara("ãƒ™ãƒ³ãƒ„");
+//		System.out.println(car1.getName()+"ã¯"+car1.getSpeed()+"km/hã§èµ°ã£ãŸ");
+		car1.drive();
+		car1.drive(3);
+		
+		System.out.println(car1.getName());
+		Driver hu=new Driver("taro");
+		System.out.println("ãƒ‰ãƒ©ã‚¤ãƒãƒ¼ã¯ï¼œ"+hu.getName()+"ï¼ã§ã™ã€‚");
 	}
 }
-//‚±‚ÌƒNƒ‰ƒX‚Í‘¼ƒNƒ‰ƒX‚©‚çƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é‚©‚à‚µ‚ê‚È‚¢‚©‚çpublic‚ğ‚Â‚¯‚ÄA
-//Tmp0927‚ğpublicŠO‚·‚×‚«‚©‚à‚µ‚ê‚È‚¢
-////ANS:public‚ª‚Â‚¢‚Ä‚¢‚È‚­‚Ä‚àA‘¼ƒNƒ‰ƒX‘¼ƒpƒP‚©‚çƒCƒ“ƒXƒ^ƒ“ƒX¶¬‰Â”\
-class Car{
+//ã“ã®ã‚¯ãƒ©ã‚¹ã¯ä»–ã‚¯ãƒ©ã‚¹ã‹ã‚‰ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ã‹ã‚‚ã—ã‚Œãªã„ã‹ã‚‰publicã‚’ã¤ã‘ã¦ã€
+//Tmp0927ã‚’publicå¤–ã™ã¹ãã‹ã‚‚ã—ã‚Œãªã„
+////ANS:publicãŒã¤ã„ã¦ã„ãªãã¦ã‚‚ã€ä»–ã‚¯ãƒ©ã‚¹ä»–ãƒ‘ã‚±ã‹ã‚‰ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ç”Ÿæˆå¯èƒ½
+class Cara{
 	private int speed;
 	private String name;
-	public Car(int speed,String name) {//ƒRƒ“ƒXƒgƒ‰ƒNƒ^Aˆø”‚Q
+	private Driver hu;
+	public Cara(int speed,String name) {//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€å¼•æ•°ï¼’
 		this.speed=speed;
 		this.name=name;
 	}
-	public Car(String name) {//ƒRƒ“ƒXƒgƒ‰ƒNƒ^Aˆø”‚P
+	public Cara(int speed,String name,String hu) {//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€å¼•æ•°ï¼“
+		this.speed=speed;
+		this.name=name;
+		this.hu=new Driver(hu);
+	}
+	public Cara(String name) {//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€å¼•æ•°ï¼‘
 		this.name=name;
 	}
 	public void setSpeed(int speed) {
@@ -108,12 +120,15 @@ class Car{
 		return this.name;
 	}
 	public void drive() {
-		System.out.println(this.name+"‚Í"+this.speed+"km/h‚Å‘–‚Á‚½");
+		System.out.println(this.name+"ã¯"+this.speed+"km/hã§èµ°ã£ãŸ");
+	}
+	public void drive(int hour) {
+		System.out.println(this.name+"ã¯"+this.speed+"km/hã§"+hour+"æ™‚é–“èµ°ã£ãŸã€‚");
 	}
 }
-//‚±‚ÌƒNƒ‰ƒX‚Í‘¼ƒNƒ‰ƒX‚©‚çƒCƒ“ƒXƒ^ƒ“ƒX‰»‚·‚é‚©‚à‚µ‚ê‚È‚¢‚©‚çpublic‚ğ‚Â‚¯‚ÄA
-//Tmp0927‚ğpublicŠO‚·‚×‚«‚©‚à‚µ‚ê‚È‚¢
-////ANS:public‚ª‚Â‚¢‚Ä‚¢‚È‚­‚Ä‚àA‘¼ƒNƒ‰ƒX‘¼ƒpƒP‚©‚çƒCƒ“ƒXƒ^ƒ“ƒX¶¬‰Â”\
+//ã“ã®ã‚¯ãƒ©ã‚¹ã¯ä»–ã‚¯ãƒ©ã‚¹ã‹ã‚‰ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹åŒ–ã™ã‚‹ã‹ã‚‚ã—ã‚Œãªã„ã‹ã‚‰publicã‚’ã¤ã‘ã¦ã€
+//Tmp0927ã‚’publicå¤–ã™ã¹ãã‹ã‚‚ã—ã‚Œãªã„
+////ANS:publicãŒã¤ã„ã¦ã„ãªãã¦ã‚‚ã€ä»–ã‚¯ãƒ©ã‚¹ä»–ãƒ‘ã‚±ã‹ã‚‰ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ç”Ÿæˆå¯èƒ½
 class Item{
 	String name;
 	int price;
@@ -122,6 +137,18 @@ class Item{
 		this.price=price;
 	}
 	public void display() {
-		System.out.println(name+"‚Í"+price+"‰~");
+		System.out.println(name+"ã¯"+price+"å††");
+	}
+}
+class Driver{
+	private String name;
+	public Driver(String name) {//ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+		this.name=name;
+	}
+	public void setName(String name) {
+		this.name=name;
+	}
+	public String getName() {
+		return this.name;
 	}
 }
