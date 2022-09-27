@@ -19,7 +19,7 @@ public class Practice {
 		
 		
 //		Chara c1=new Chara("‚½‚¢‚·‚¯",100);
-////		System.out.println(c1.getName());
+//		System.out.println(c1.getName());
 //		System.out.println(c1);
 //		System.out.println("------------------------");
 //		String str1="‚±‚ñ‚É‚¿‚Í";
@@ -54,14 +54,18 @@ public class Practice {
 //		Order order=new Order("ƒŠƒ“ƒS",5);
 //		order.show();
 		
-		Cash obj=new Cash(10000);
-		System.out.println(obj.getBalance());
-		obj.deposit(3000);
-		System.out.println(obj.getBalance());
-		obj.drown(8000);
-		System.out.println(obj.getBalance());
-		obj.drown(12000);
-		System.out.println(obj.getBalance());
+//		Cash obj=new Cash(10000);
+//		System.out.println(obj.getBalance());
+//		obj.deposit(3000);
+//		System.out.println(obj.getBalance());
+//		obj.drown(8000);
+//		System.out.println(obj.getBalance());
+//		obj.drown(12000);
+//		System.out.println(obj.getBalance());
+		
+		
+		
+		
 	}
 	
 }
