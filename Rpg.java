@@ -1,35 +1,37 @@
 package practice;
 
+import java.util.ArrayList;
+
 public class Rpg {
 
 	public static void main(String[] args) {
-		Person1 enemy=new Person1("ãƒ‰ãƒ©ã‚´ãƒ³",25);
-		Person1 player=new Person1("ã¿ãšã",100);
-		Warrior player2=new Warrior("ãŠã¨ã‚‚",80);
+		Person1 enemy=new Person1("ƒhƒ‰ƒSƒ“",25);
+		Person1 player=new Person1("‚İ‚¸‚«",100);
+		Warrior player2=new Warrior("‚¨‚Æ‚à",80);
 		
-		boolean turn=false;//falseã§ãƒ‰ãƒ©ã‚´ãƒ³å…ˆè¡Œ
+		boolean turn=false;//false‚Åƒhƒ‰ƒSƒ“æs
 		boolean win;
 		while(true) {
-			if(turn) {//ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã®ã‚¿ãƒ¼ãƒ³
+			if(turn) {//ƒvƒŒƒCƒ„[‚Ìƒ^[ƒ“
 				
 				if(player.getAlive()) {
 					player.attack(enemy);
-					if(!enemy.check()) {//enemyãŒå€’ã‚ŒãŸã‚‰
+					if(!enemy.check()) {//enemy‚ª“|‚ê‚½‚ç
 						win=true;
 						break;
 					}
 				}
 				if(player2.getAlive()) {
 					player2.attack(enemy);
-					if(!enemy.check()) {//enemyãŒå€’ã‚ŒãŸã‚‰
+					if(!enemy.check()) {//enemy‚ª“|‚ê‚½‚ç
 						win=true;
 						break;
 					}
 				}
 				
-				turn=false;//ã‚¿ãƒ¼ãƒ³ã‚¨ãƒ³ãƒ‰
+				turn=false;//ƒ^[ƒ“ƒGƒ“ƒh
 				
-			}else {//ã‚¨ãƒãƒŸãƒ¼ã®ã‚¿ãƒ¼ãƒ³
+			}else {//ƒGƒlƒ~[‚Ìƒ^[ƒ“
 				enemy.attack(player);
 				enemy.attack(player2);
 				player.died();
@@ -40,18 +42,25 @@ public class Rpg {
 					break;
 				}
 				
-				turn=true;//ã‚¿ãƒ¼ãƒ³ã‚¨ãƒ³ãƒ‰
+				turn=true;//ƒ^[ƒ“ƒGƒ“ƒh
 			}
 			System.out.println("---trun chenge---");
 		}
-		if(win) {//å‹æ•—åˆ¤å®š
-			System.out.println(enemy.getName()+"ã¯å€’ã‚ŒãŸã€‚");
-			System.out.println("ã‚²ãƒ¼ãƒ ã‚¯ãƒªã‚¢");
+		if(win) {//Ÿ”s”»’è
+			System.out.println(enemy.getName()+"‚Í“|‚ê‚½B");
+			System.out.println("ƒQ[ƒ€ƒNƒŠƒA");
 		}else {
-			System.out.println(player.getName()+"ã¨"+player2.getName()+"ã¯å€’ã‚ŒãŸ");
-			System.out.println("ã‚²ãƒ¼ãƒ ã‚ªãƒ¼ãƒãƒ¼");
+			System.out.println(player.getName()+"‚Æ"+player2.getName()+"‚Í“|‚ê‚½");
+			System.out.println("ƒQ[ƒ€ƒI[ƒo[");
 		}
 		
+		//’Ç‰Á‰Û‘è7
+		ArrayList<Person1> monsters=new ArrayList<>();
+		monsters.add(new Person1("ƒSƒuƒŠƒ“",40));
+		monsters.add(new Person1("ƒI[ƒN",60));
+		monsters.add(new Person1("ƒXƒ‰ƒCƒ€",30));
+		monsters.get(1).attack(player2);
+		player2.attack(monsters.get(1));
 	}
 
 }
@@ -61,12 +70,12 @@ class Warrior extends Person1{
 		
 	}
 	public void attack(Person1 target) {
-		System.out.println(this.getName()+"ã®æ”»æ’ƒï¼"+target.getName()+"ã«30ã®ãƒ€ãƒ¡ãƒ¼ã‚¸");
+		System.out.println(this.getName()+"‚ÌUŒ‚I"+target.getName()+"‚É30‚Ìƒ_ƒ[ƒW");
 		target.setHp(target.getHp()-30);
 		
-		//ã“ã“ã§check()ã‚’ä½¿ç”¨ã™ã‚Œã°hp:-ã€‡ã‚’é¿ã‘ã‚Œã‚‹
+		//‚±‚±‚Åcheck()‚ğg—p‚·‚ê‚Îhp:-Z‚ğ”ğ‚¯‚ê‚é
 		boolean garbage=target.check();
-		System.out.println(target.getName()+"ã®æ®‹ã‚ŠHPï¼š"+target.getHp());//ã“ã“ã®å‹•ãã‚’å¤‰ãˆãŸã„
+		System.out.println(target.getName()+"‚Ìc‚èHPF"+target.getHp());//‚±‚±‚Ì“®‚«‚ğ•Ï‚¦‚½‚¢
 	}
 }
 class Person1{
@@ -90,19 +99,19 @@ class Person1{
 	public int getHp() {
 		return this.hp;
 	}
-	public void died() {//playerç”¨ã®ãƒ¡ã‚½ãƒƒãƒ‰
+	public void died() {//player—p‚Ìƒƒ\ƒbƒh
 		if(this.hp<=0) {
 			this.hp=0;
 			this.alive=false;
 		}
 	}
-	public boolean check() {//ç”Ÿãæ®‹ã‚Šãƒã‚§ãƒƒã‚¯
+	public boolean check() {//¶‚«c‚èƒ`ƒFƒbƒN
 		if(this.hp<=0) {
 			this.alive=false;
 			this.hp=0;
 			return false;
 		}else {
-			return true;//ç”Ÿãæ®‹ã‚Š
+			return true;//¶‚«c‚è
 		}
 	}
 	public boolean getAlive() {
@@ -110,9 +119,9 @@ class Person1{
 	}
 	
 	public void attack(Person1 target) {
-		System.out.println(this.name+"ã®æ”»æ’ƒï¼"+target.getName()+"ã«10ã®ãƒ€ãƒ¡ãƒ¼ã‚¸");
+		System.out.println(this.name+"‚ÌUŒ‚I"+target.getName()+"‚É10‚Ìƒ_ƒ[ƒW");
 		target.setHp(target.getHp()-10);
 		boolean garbage=target.check();
-		System.out.println(target.getName()+"ã®æ®‹ã‚Šhpï¼š"+target.getHp());
+		System.out.println(target.getName()+"‚Ìc‚èhpF"+target.getHp());
 	}
 }
