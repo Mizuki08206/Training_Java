@@ -1,11 +1,14 @@
 package practice;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
+
+import practice.Q8_1.Cat;
 
 public class Practice1 {
 
-	public static void main(String[] args) {//—ûK–â‘èURLFhttps://kitako.tokyo/lib/JavaExercise.aspx?id=4
+	public static void main(String[] args) {//ç·´ç¿’å•é¡ŒURLï¼šhttps://kitako.tokyo/lib/JavaExercise.aspx?id=4
 //		Q4_1.q();
 //		Q4_2.q();
 //		Q4_3.q();
@@ -19,10 +22,16 @@ public class Practice1 {
 //		Q7_2.q();
 //		Q7_3.q();
 //		Q7_4.q();
-		
+//		Q7_5.q();
+//		Q7_6.q();
+//		Q8_1.q();
+//		Q8_2.q();
+//		Q8_3.q();
+//		Q8_4.q();
+//		Q8_5.q();
 	}
 }
-//—ûK–â‘è4-1
+//ç·´ç¿’å•é¡Œ4-1
 class Q4_1{
 	public static void q() {
 		for(int i=0;i<10;i++) {
@@ -30,7 +39,7 @@ class Q4_1{
 		}
 	}
 }
-//—ûK–â‘è4-2
+//ç·´ç¿’å•é¡Œ4-2
 class Q4_2{
 	public static void q() {
 		for(int i=3;i<28;i++) {
@@ -38,7 +47,7 @@ class Q4_2{
 		}
 	}
 }
-//—ûK–â‘è4-3
+//ç·´ç¿’å•é¡Œ4-3
 class Q4_3{
 	public static void q() {
 		for(int i=1;i<9;i++) {
@@ -51,7 +60,7 @@ class Q4_3{
 		}
 	}
 }
-//—ûK–â‘è4-4
+//ç·´ç¿’å•é¡Œ4-4
 class Q4_4{
 	public static void q() {
 		int sum=7;
@@ -61,14 +70,14 @@ class Q4_4{
 		System.out.println(sum);
 	}
 }
-//—ûK–â‘è4-5
+//ç·´ç¿’å•é¡Œ4-5
 class Q4_5{
 	public static void q() {
 		int sum=0;
 		int i=0;
 		while(true) {
 			try {
-				System.out.print("®”‚ğ“ü—Í>>");
+				System.out.print("æ•´æ•°ã‚’å…¥åŠ›>>");
 				sum+=new java.util.Scanner(System.in).nextInt();
 				i++;
 				if(i==10) {
@@ -81,7 +90,7 @@ class Q4_5{
 		}
 	}
 }
-//—ûK–â‘è4-6
+//ç·´ç¿’å•é¡Œ4-6
 class Q4_6{
 	public static void q() {
 		int win=0;
@@ -89,7 +98,7 @@ class Q4_6{
 		int num=0;
 		while(true) {
 			try {
-				System.out.println("0:•‰‚¯A1:Ÿ‚¿");
+				System.out.println("0:è² ã‘ã€1:å‹ã¡");
 				int in=new java.util.Scanner(System.in).nextInt();
 				if(in==0 || in==1) {
 					if(in==0) {
@@ -99,12 +108,12 @@ class Q4_6{
 					}
 					num++;
 				}else {
-					System.out.println("0‚©1‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+					System.out.println("0ã‹1ã§å…¥åŠ›ã—ã¦ãã ã•ã„");
 				}
 				if(num==10) {
-					System.out.println("---“ü—ÍI—¹---");
-					System.out.println("Ÿ‚¿”F"+win);
-					System.out.println("•‰‚¯”F"+lose);
+					System.out.println("---å…¥åŠ›çµ‚äº†---");
+					System.out.println("å‹ã¡æ•°ï¼š"+win);
+					System.out.println("è² ã‘æ•°ï¼š"+lose);
 					break;
 				}
 			}catch(Exception e) {
@@ -115,7 +124,7 @@ class Q4_6{
 		
 	}
 }
-//—ûK–â‘è4-7
+//ç·´ç¿’å•é¡Œ4-7
 class Q4_7{
 	public static void q() {
 		int hansin=0;
@@ -125,19 +134,19 @@ class Q4_7{
 		while(num<11) {
 			try {
 				if(!flag) {
-					System.out.print(num+"‰ñ•\A‹l‚Ì“¾“_‚ÍH");
+					System.out.print(num+"å›è¡¨ã€å·¨äººã®å¾—ç‚¹ã¯ï¼Ÿ");
 					int tmp=new java.util.Scanner(System.in).nextInt();
 					if(tmp<0) {
-						System.out.println("“ü—Í’l‚ª‚¨‚©‚µ‚¢");
+						System.out.println("å…¥åŠ›å€¤ãŒãŠã‹ã—ã„");
 					}else {
 						kyozin+=tmp;
 						flag=true;
 					}
 				}else {
-					System.out.print(num+"‰ñ— Aã_‚Ì“¾“_‚ÍH");
+					System.out.print(num+"å›è£ã€é˜ªç¥ã®å¾—ç‚¹ã¯ï¼Ÿ");
 					int tmp=new java.util.Scanner(System.in).nextInt();
 					if(tmp<0) {
-						System.out.println("“ü—Í’l‚ª‚¨‚©‚µ‚¢");
+						System.out.println("å…¥åŠ›å€¤ãŒãŠã‹ã—ã„");
 					}else {
 						hansin+=tmp;
 						flag=false;
@@ -145,30 +154,30 @@ class Q4_7{
 					}
 				}
 			}catch(Exception e) {
-				System.out.println("”’l‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+				System.out.println("æ•°å€¤ã§å…¥åŠ›ã—ã¦ãã ã•ã„");
 			}
 		}
-		System.out.println("‹lF"+kyozin+"“_Aã_F"+hansin+"“_");
+		System.out.println("å·¨äººï¼š"+kyozin+"ç‚¹ã€é˜ªç¥ï¼š"+hansin+"ç‚¹");
 		if(kyozin>hansin) {
-			System.out.println("‹l‚ÌŸ‚¿");
+			System.out.println("å·¨äººã®å‹ã¡");
 		}else if(hansin==kyozin){
-			System.out.println("ˆø‚«•ª‚¯");
+			System.out.println("å¼•ãåˆ†ã‘");
 		}else {
-			System.out.println("ã_‚ÌŸ‚¿");
+			System.out.println("é˜ªç¥ã®å‹ã¡");
 		}
 	}
 }
-//—ûK–â‘è4-8
+//ç·´ç¿’å•é¡Œ4-8
 class Q4_8{
 	public static void q() {
 		int num=0;
 		int max=0;
 		while(num<10) {
 			try {
-				System.out.print((num+1)+"‰ñ–Ú‚Ì“ü—ÍF");
+				System.out.print((num+1)+"å›ç›®ã®å…¥åŠ›ï¼š");
 				int input=new java.util.Scanner(System.in).nextInt();
 				if(input<0) {
-					System.out.println("©‘R”‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+					System.out.println("è‡ªç„¶æ•°ã§å…¥åŠ›ã—ã¦ãã ã•ã„");
 					continue;
 				}else {
 					if(max<input) {
@@ -177,13 +186,13 @@ class Q4_8{
 					num++;
 				}
 			}catch(Exception e) {
-				System.out.println("”’l‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+				System.out.println("æ•°å€¤ã§å…¥åŠ›ã—ã¦ãã ã•ã„");
 			}
 		}
-		System.out.println("Å‘å’l:"+max);
+		System.out.println("æœ€å¤§å€¤:"+max);
 	}
 }
-//—ûK–â‘è4-9
+//ç·´ç¿’å•é¡Œ4-9
 class Q4_9{
 	public static void q() {
 		int num=0;
@@ -191,16 +200,16 @@ class Q4_9{
 		int max=Integer.MIN_VALUE;
 		while(num<10) {
 			try {
-				System.out.print((num+1)+"‰ñ–Ú‚Ì“ü—ÍF");
+				System.out.print((num+1)+"å›ç›®ã®å…¥åŠ›ï¼š");
 				int input=new java.util.Scanner(System.in).nextInt();
-				if(input<0) {//“ü—Í’l‚ª³‚Ì”
-					System.out.println("©‘R”‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+				if(input<0) {//å…¥åŠ›å€¤ãŒæ­£ã®æ•°
+					System.out.println("è‡ªç„¶æ•°ã§å…¥åŠ›ã—ã¦ãã ã•ã„");
 					continue;
-				}else {//“ü—Í’l‚ª•‰‚Ì”
-					if(num==0) {//1‰ñ–Ú‚Ì“ü—Í
+				}else {//å…¥åŠ›å€¤ãŒè² ã®æ•°
+					if(num==0) {//1å›ç›®ã®å…¥åŠ›
 						min=input;
 						max=input;
-					}else {//2‰ñ–ÚˆÈ~‚Ì“ü—Í
+					}else {//2å›ç›®ä»¥é™ã®å…¥åŠ›
 						if(min>input) {
 							min=input;
 						}else if(max<input) {
@@ -211,40 +220,40 @@ class Q4_9{
 				}
 				
 			}catch(Exception e) {
-				System.out.println("”’l‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+				System.out.println("æ•°å€¤ã§å…¥åŠ›ã—ã¦ãã ã•ã„");
 			}
 		}
-		System.out.println("Å‘å’l:"+max+"AÅ¬’l:"+min);
+		System.out.println("æœ€å¤§å€¤:"+max+"ã€æœ€å°å€¤:"+min);
 	}
 }
-//—ûK–â‘è7-1
-class Q7_1{//ƒAƒEƒ^[ƒNƒ‰ƒX
+//ç·´ç¿’å•é¡Œ7-1
+class Q7_1{//ã‚¢ã‚¦ã‚¿ãƒ¼ã‚¯ãƒ©ã‚¹
 	public static void q() {
 		Q7_1 obj=new Q7_1();
 		Dog dog=obj.new Dog();
-		dog.setName("ƒ|ƒ`");
+		dog.setName("ãƒãƒ");
 		dog.showProfile();
 	}
-	class Dog{//ƒCƒ“ƒi[ƒNƒ‰ƒX
+	class Dog{//ã‚¤ãƒ³ãƒŠãƒ¼ã‚¯ãƒ©ã‚¹
 		private String name;
 		public void setName(String name) {
 			this.name=name;
 		}
 		public void showProfile() {
-			System.out.println("–¼‘O‚ÍA"+this.name+"‚Å‚·B");
+			System.out.println("åå‰ã¯ã€"+this.name+"ã§ã™ã€‚");
 		}
 	}
 }
-//—ûK–â‘è7-2
-class Q7_2{//ƒAƒEƒ^[ƒNƒ‰ƒX
+//ç·´ç¿’å•é¡Œ7-2
+class Q7_2{//ã‚¢ã‚¦ã‚¿ãƒ¼ã‚¯ãƒ©ã‚¹
 	public static void q() {
 		Q7_2 obj=new Q7_2();
 		Dog dog=obj.new Dog();
-		dog.setName("ƒ|ƒ`");
+		dog.setName("ãƒãƒ");
 		dog.setAge(3);
 		dog.showProfile();
 	}
-	class Dog{//ƒCƒ“ƒi[ƒNƒ‰ƒX
+	class Dog{//ã‚¤ãƒ³ãƒŠãƒ¼ã‚¯ãƒ©ã‚¹
 		private String name;
 		private int age;
 		
@@ -255,24 +264,24 @@ class Q7_2{//ƒAƒEƒ^[ƒNƒ‰ƒX
 			this.age=age;
 		}
 		public void showProfile() {
-			System.out.println("–¼‘O‚Í"+this.name+"A”N—î‚Í"+age+"‚Å‚·B");
+			System.out.println("åå‰ã¯"+this.name+"ã€å¹´é½¢ã¯"+age+"ã§ã™ã€‚");
 		}
 	}
 }
-//—ûK–â‘è7-3
-class Q7_3{//ƒAƒEƒ^[ƒNƒ‰ƒX
+//ç·´ç¿’å•é¡Œ7-3
+class Q7_3{//ã‚¢ã‚¦ã‚¿ãƒ¼ã‚¯ãƒ©ã‚¹
 	public static void q() {
-		Q7_3 obj=new Q7_3();//ƒAƒEƒ^[ƒNƒ‰ƒX‚Ìobj‚P‚Â‚ÅƒCƒ“ƒi[ƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚ª2‚ÂˆÈãì‚ê‚é
+		Q7_3 obj=new Q7_3();//ã‚¢ã‚¦ã‚¿ãƒ¼ã‚¯ãƒ©ã‚¹ã®objï¼‘ã¤ã§ã‚¤ãƒ³ãƒŠãƒ¼ã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒ2ã¤ä»¥ä¸Šä½œã‚Œã‚‹
 		Dog dog1=obj.new Dog();
 		Dog dog2=obj.new Dog();
-		dog1.setName("ƒ|ƒ`");
-		dog2.setName("ƒ^ƒ}");
+		dog1.setName("ãƒãƒ");
+		dog2.setName("ã‚¿ãƒ");
 		dog1.setAge(2);
 		dog2.setAge(3);
 		dog1.showProfile();
 		dog2.showProfile();
 	}
-	class Dog{//ƒCƒ“ƒi[ƒNƒ‰ƒX
+	class Dog{//ã‚¤ãƒ³ãƒŠãƒ¼ã‚¯ãƒ©ã‚¹
 		private String name;
 		private int age;
 		public void setName(String name) {
@@ -282,20 +291,20 @@ class Q7_3{//ƒAƒEƒ^[ƒNƒ‰ƒX
 			this.age=age;
 		}
 		public void showProfile() {
-			System.out.println("–¼‘O‚Í"+this.name+"A”N—î‚Í"+age+"‚Å‚·B");
+			System.out.println("åå‰ã¯"+this.name+"ã€å¹´é½¢ã¯"+age+"ã§ã™ã€‚");
 		}
 	}
 }
-//—ûK–â‘è7-4
-class Q7_4{//ƒAƒEƒ^[ƒNƒ‰ƒX
+//ç·´ç¿’å•é¡Œ7-4
+class Q7_4{//ã‚¢ã‚¦ã‚¿ãƒ¼ã‚¯ãƒ©ã‚¹
 	public static void q() {
 		Q7_4 obj=new Q7_4();
-		Dog dog=obj.new Dog("‚ ‚°‚Ï‚ñ");
+		Dog dog=obj.new Dog("ã‚ã’ã±ã‚“");
 		dog.setAge(2);
-		dog.setName("ƒ|ƒ`");
+		dog.setName("ãƒãƒ");
 		dog.showProfile();
 	}
-	class Dog{//ƒCƒ“ƒi[ƒNƒ‰ƒX
+	class Dog{//ã‚¤ãƒ³ãƒŠãƒ¼ã‚¯ãƒ©ã‚¹
 		private String name;
 		private int age;
 		private String type;
@@ -309,12 +318,12 @@ class Q7_4{//ƒAƒEƒ^[ƒNƒ‰ƒX
 			this.age=age;
 		}
 		public void showProfile() {
-			System.out.println("–¼‘O‚Í"+this.name+"A”N—î‚Í"+age+"AŒ¢í‚Í"+this.type+"‚Å‚·B");
+			System.out.println("åå‰ã¯"+this.name+"ã€å¹´é½¢ã¯"+age+"ã€çŠ¬ç¨®ã¯"+this.type+"ã§ã™ã€‚");
 		}
 	}
 }
-//—ûK–â‘è7-5
-class Q7_5{//ƒAƒEƒ^[ƒNƒ‰ƒX
+//ç·´ç¿’å•é¡Œ7-5
+class Q7_5{//ã‚¢ã‚¦ã‚¿ãƒ¼ã‚¯ãƒ©ã‚¹
 	public static void q() {
 		Map<Integer,Integer> array=new HashMap<>();
 		array.put(0,0);
@@ -325,26 +334,71 @@ class Q7_5{//ƒAƒEƒ^[ƒNƒ‰ƒX
 		array.put(5,0);
 		Q7_5 obj=new Q7_5();
 		CoinCase cc=obj.new CoinCase(array);
-		int num=0;
-		while(true) {
-			try {
-				System.out.println("0:500,1:100,2:50,3:10,4:5,5:1");
-				System.out.print("‚Ç‚Ìd‰İ>>");
-				int coin=new java.util.Scanner(System.in).nextInt();
-				System.out.print("‰½–‡>>");
-				int many=new java.util.Scanner(System.in).nextInt();
-				if(many<0) {
-					System.out.println("“ü—Í‚ª‚¨‚©‚µ‚¢");
-					continue;
-				}
-				
-			}catch(Exception e) {
-				System.out.println("”’l‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢");
+		int num;
+		
+		//check
+		for(int i=0;i<6;i++) {
+			num=cc.getCount(i);
+			if(num==-1) {
+				System.out.println("ãã®ã‚ˆã†ãªã‚³ã‚¤ãƒ³ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚");
+			}else {
+				System.out.println(i+"ï¼š"+num+"æšã‚ã‚Šã¾ã™ã€‚");
 			}
 		}
 		
+		int coin;
+		int many;
+		for(int i=0;i<5;i++) {
+			while(true) {
+				try {
+					System.out.println("0:500,1:100,2:50,3:10,4:5,5:1");
+					System.out.print("ã©ã®ç¡¬è²¨>>");
+					coin=new java.util.Scanner(System.in).nextInt();
+					System.out.print("ä½•æš>>");
+					many=new java.util.Scanner(System.in).nextInt();
+					if(many<0 || (coin<0 || 5<coin)) {
+						System.out.println("å…¥åŠ›ãŒãŠã‹ã—ã„");
+						continue;
+					}
+					break;
+				}catch(Exception e) {
+					System.out.println("æ•°å€¤ã§å…¥åŠ›ã—ã¦ãã ã•ã„");
+				}
+			}
+			switch(coin) {
+			case 0:
+				cc.addCoins(coin, many);
+				break;
+			case 1:
+				cc.addCoins(coin, many);
+				break;
+			case 2:
+				cc.addCoins(coin, many);
+				break;
+			case 3:
+				cc.addCoins(coin, many);
+				break;
+			case 4:
+				cc.addCoins(coin, many);
+				break;
+			case 5:
+				cc.addCoins(coin, many);
+				break;
+			}
+		}
+		System.out.println("0:500,1:100,2:50,3:10,4:5,5:1");
+		for(int i=0;i<6;i++) {
+			num=cc.getCount(i);
+			if(num==-1) {
+				System.out.println("ãã®ã‚ˆã†ãªã‚³ã‚¤ãƒ³ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚");
+			}else {
+				System.out.println(i+"ï¼š"+num+"æšã‚ã‚Šã¾ã™ã€‚");
+			}
+		}
+		System.out.println("ç·é¡ã¯:"+cc.getAmount());
+		
 	}
-	class CoinCase{//ƒCƒ“ƒi[ƒNƒ‰ƒX
+	class CoinCase{//ã‚¤ãƒ³ãƒŠãƒ¼ã‚¯ãƒ©ã‚¹
 		private Map<Integer,Integer> array;
 		
 		public void addCoins(int coin,int many) {
@@ -355,7 +409,7 @@ class Q7_5{//ƒAƒEƒ^[ƒNƒ‰ƒX
 		}
 		public int getCount(int coin){
 			Integer num=array.get(coin);
-			if(num!=null) {
+			if(num==null) {
 				return -1;
 			}else {
 				return num;
@@ -364,22 +418,293 @@ class Q7_5{//ƒAƒEƒ^[ƒNƒ‰ƒX
 		public int getAmount() {
 			int sum=0;
 			for(Integer num:array.keySet()) {
-				sum+=num;
+				switch(num) {
+				case 0:
+					sum+=500*array.get(num);
+					break;
+				case 1:
+					sum+=100*array.get(num);
+					break;
+				case 2:
+					sum+=50*array.get(num);
+					break;
+				case 3:
+					sum+=10*array.get(num);
+					break;
+				case 4:
+					sum+=5*array.get(num);
+					break;
+				case 5:
+					sum+=1*array.get(num);
+					break;
+				}
 			}
 			return sum;
 		}
 		public CoinCase(Map<Integer,Integer> array) {
 			this.array=array;
 		}
-		
 	}
 }
-
-
-
-
-
-
-
-
-
+//ç·´ç¿’å•é¡Œ7-6
+class Q7_6{//ã‚¢ã‚¦ã‚¿ãƒ¼ã‚¯ãƒ©ã‚¹
+	public static void q() {
+		Map<Integer,Integer> array=new LinkedHashMap<>();
+		array.put(500,0);
+		array.put(100,0);
+		array.put(50,0);
+		array.put(10,0);
+		array.put(5,0);
+		array.put(1,0);
+		Q7_6 obj=new Q7_6();
+		CoinCase cc=obj.new CoinCase(array);
+		int num;
+		
+		
+//		System.out.println("-----458-----");//462ã¨åŒã˜
+//		for(Integer key:array.keySet()) {
+//			System.out.println(key+"ï¼š"+array.get(key));
+//		}
+		System.out.println("-----462-----");
+		array=cc.getCount();
+		for(Integer key:array.keySet()) {
+			System.out.println(key+"ï¼š"+array.get(key));
+		}
+		
+		int coin;
+		int many;
+		for(int i=0;i<5;i++) {
+			while(true) {
+				try {
+					System.out.println("\nç¡¬è²¨ã®è¿½åŠ ã‚’è¡Œã„ã¾ã™ã€‚");
+					System.out.println("500,100,50,10,5,1");
+					System.out.print("ã©ã®ç¡¬è²¨>>");
+					coin=new java.util.Scanner(System.in).nextInt();
+					System.out.print("ä½•æš>>");
+					many=new java.util.Scanner(System.in).nextInt();
+					if(many<0) {
+						System.out.println("å…¥åŠ›ãŒãŠã‹ã—ã„");
+						continue;
+					}
+					break;
+				}catch(Exception e) {
+					System.out.println("æ•°å€¤ã§å…¥åŠ›ã—ã¦ãã ã•ã„");
+				}
+			}
+			cc.addCoins(coin, many);
+		}
+		System.out.println("500,100,50,10,5,1");
+		
+//		for(Integer i:array.keySet()) {//500ã¨åŒä¸€
+//			num=cc.getCount(i);
+//			if(num==-1) {
+//				System.out.println("ãã®ã‚ˆã†ãªã‚³ã‚¤ãƒ³ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚");
+//			}else {
+//				System.out.println(i+"ï¼š"+num);
+//			}
+//		}
+		System.out.println("-----500-----");
+		array=cc.getCount();
+		for(Integer key:array.keySet()) {
+			System.out.println(key+"ï¼š"+array.get(key));
+		}
+		
+		System.out.println("---ç¡¬è²¨åˆ¥ã®ç·é¡---");
+		for(Integer key:array.keySet())	{
+			System.out.println(key+"ã®ç·é¡ã¯"+key*array.get(key));
+		}
+		int sum=0;
+		System.out.println("---ç¡¬è²¨ã®ç·æšæ•°---");
+		for(Integer key:array.keySet()) {
+			sum+=array.get(key);
+		}
+		System.out.println(sum);
+		
+		System.out.println("---å…¨ä½“ã®ç·é¡---");
+		System.out.println("ç·é¡ã¯:"+cc.getAmount());
+		
+	}
+	class CoinCase{//ã‚¤ãƒ³ãƒŠãƒ¼ã‚¯ãƒ©ã‚¹
+		private Map<Integer,Integer> array;
+		
+		public void addCoins(int coin,int many) {
+			Integer num=array.get(coin);
+			if(num!=null) {
+				array.put(coin,many+num);
+			}else {
+				System.out.println("å…¥åŠ›ã•ã‚ŒãŸç¡¬è²¨ã¯ã‚ã‚Šã¾ã›ã‚“ã§ã—ãŸã€‚---505");
+			}
+		}
+		public int getCount(int coin){
+			Integer num=array.get(coin);
+			if(num==null) {
+				return -1;
+			}else {
+				return num;
+			}
+		}
+		public Map<Integer,Integer> getCount() {
+			return array;
+		}
+		public int getAmount() {
+			int sum=0;
+			for(Integer num:array.keySet()) {
+				sum+=num*array.get(num);
+			}
+			return sum;
+		}
+		public int getAmount(int coin) {
+			Integer num=array.get(coin);
+			int sum=0;
+			if(num!=null) {
+				sum+=coin*num;
+			}
+			return sum;
+		}
+		public CoinCase(Map<Integer,Integer> array) {
+			this.array=array;
+		}
+	}
+}
+//ç·´ç¿’å•é¡Œ8-1
+class Q8_1{//ã‚¢ã‚¦ã‚¿ãƒ¼ã‚¯ãƒ©ã‚¹
+	public static void q() {
+		Q8_1 obj=new Q8_1();
+		Cat cat=obj.new Cat();
+		cat.name="ã‚´ãƒªãƒ©";
+		cat.age=2;
+		cat.showProfile();
+		cat.sleep();
+	}
+	class Cat extends Animal{
+		public void sleep() {
+			System.out.println("ã‚¹ãƒ¼ã‚¹ãƒ¼");
+		}
+	}
+	class Animal{
+		public String name;
+		public int age;
+		public void showProfile() {
+			System.out.println("åå‰ã¯ã€"+this.name+"ã€"+this.age+"æ­³ã§ã™ã€‚");
+		}
+	}
+}
+//ç·´ç¿’å•é¡Œ8-2
+class Q8_2{//ã‚¢ã‚¦ã‚¿ãƒ¼ã‚¯ãƒ©ã‚¹
+	public static void q() {
+		Q8_1 obj1=new Q8_1();
+		Q8_2 obj2=new Q8_2();
+		Cat cat=obj1.new Cat();
+		Dog dog=obj2.new Dog();
+		cat.name="ã‚´ãƒªãƒ©";
+		cat.age=2;
+		dog.name="ã‚­ãƒªãƒ³";
+		dog.age=3;
+		cat.showProfile();
+		dog.showProfile();
+		cat.sleep();
+		dog.run();
+		
+	}
+	class Dog extends Animal{//ã‚¤ãƒ³ãƒŠãƒ¼ã‚¯ãƒ©ã‚¹
+		public void run() {
+			System.out.println("ãƒˆã‚³ãƒˆã‚³");
+		}
+	}
+	class Animal{
+		public String name;
+		public int age;
+		public void showProfile() {
+			System.out.println("åå‰ã¯ã€"+this.name+"ã€"+this.age+"æ­³ã§ã™ã€‚");
+		}
+	}
+}
+//ç·´ç¿’å•é¡Œ8-3
+class Q8_3{//ã‚¢ã‚¦ã‚¿ãƒ¼ã‚¯ãƒ©ã‚¹
+	public static void q() {
+		Q8_3 obj=new Q8_3();
+		Animal cat=obj.new Cat();
+		Animal dog=obj.new Dog();
+		dog.speak();
+		cat.speak();
+	}
+	class Cat extends Animal{//ã‚¢ã‚¦ã‚¿ãƒ¼ã‚¯ãƒ©ã‚¹
+		public void speak() {
+			System.out.println("ãƒ‹ãƒ£ãƒ¼ãƒ‹ãƒ£ãƒ¼");
+		}
+	}
+	class Dog extends Animal{
+		public void speak() {
+			System.out.println("ãƒ¯ãƒ³ãƒ¯ãƒ³");
+		}
+	}
+	class Animal{
+		public String name;
+		public int age;
+		public void showProfile() {
+			System.out.println("åå‰ã¯ã€"+this.name+"ã€"+this.age+"æ­³ã§ã™ã€‚");
+		}
+		public void speak() {
+			System.out.println("......");
+		}
+	}
+}
+//ç·´ç¿’å•é¡Œ8-4
+class Q8_4{//ã‚¢ã‚¦ã‚¿ãƒ¼ã‚¯ãƒ©ã‚¹
+	public static void q() {
+		Q8_4 obj=new Q8_4();
+		Animal[] array=new Animal[4];
+		array[0]=obj.new Cat();
+		array[1]=obj.new Dog();
+		array[2]=obj.new Cat();
+		array[3]=obj.new Dog();
+		for(Animal animal:array) {
+			animal.speak();
+		}
+	}
+	class Cat extends Animal{//ã‚¤ãƒ³ãƒŠãƒ¼ã‚¯ãƒ©ã‚¹
+		public void speak() {
+			System.out.println("ãƒ‹ãƒ£ãƒ¼ãƒ‹ãƒ£ãƒ¼");
+		}
+	}
+	class Dog extends Animal{
+		public void speak() {
+			System.out.println("ãƒ¯ãƒ³ãƒ¯ãƒ³");
+		}
+	}
+	class Animal{
+		public String name;
+		public int age;
+		public void speak() {
+			System.out.println("......");
+		}
+	}
+}
+//ç·´ç¿’å•é¡Œ8-4ã®åŒ¿åã‚¯ãƒ©ã‚¹
+class Q8_5{//ã‚¢ã‚¦ã‚¿ãƒ¼ã‚¯ãƒ©ã‚¹
+	public static void q() {
+		Q8_5 obj=new Q8_5();
+		
+		Animal cat=obj.new Animal("ã‚´ãƒªãƒ©",2) {
+			public void run() {
+				System.out.println("runrun");
+			}
+			public void showPro() {
+				System.out.println(this.name+"ã¯"+this.age+"æ­³ã§ã™ã€‚");
+			}
+		};
+		cat.showPro();
+	}
+	abstract class Animal{//ã‚¤ãƒ³ãƒŠãƒ¼ã‚¯ãƒ©ã‚¹
+		protected String name;//è¦ªã‚¯ãƒ©ã‚¹ã®ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ã‚’ç¶™æ‰¿ã•ã›ã‚‹å ´åˆã¯ã€ä¿®é£¾å­ã¯protectedä»¥ä¸Šã®ç·©ã•ã§ãªã‘ã‚Œã°ãªã‚‰ãªã„
+		protected int age;
+		public Animal(String name,int age) {
+			this.name=name;
+			this.age=age;
+		}
+		public void run() {
+			System.out.println("......");
+		}
+		public abstract void showPro();
+	}
+}
